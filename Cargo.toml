@@ -1,0 +1,27 @@
+[package]
+name = "tokio-uds-windows"
+version = "0.1.0"
+license = "MIT"
+authors = ["Azure IoT Edge Devs"]
+description = "Unix Domain sockets for Tokio...on Windows!"
+repository = "https://github.com/Azure/tokio-uds-windows"
+readme = "README.md"
+# keywords = ""
+categories = ["asynchronous"]
+exclude = [".gitignore"]
+
+[dependencies]
+bytes = "0.4.8"
+futures = "0.1.21"
+iovec = "0.1.2"
+log = "0.4.2"
+mio = "0.6.14"
+tokio-reactor = "0.1.1"
+tokio-io = "0.1.6"
+
+[target.'cfg(windows)'.dependencies]
+mio-uds-windows = { git = "https://github.com/Azure/mio-uds-windows.git" }
+
+[dev-dependencies]
+tokio = "0.1.6"
+tempfile = "3"
