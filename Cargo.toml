@@ -20,7 +20,7 @@ tokio-reactor = "0.1.1"
 tokio-io = "0.1.6"
 
 [target.'cfg(windows)'.dependencies]
-mio-uds-windows = { git = "https://github.com/Azure/mio-uds-windows.git" }
+mio-uds-windows = { git = "https://github.com/Azure/mio-uds-windows.git", branch = "main" }
 
 [dev-dependencies]
 tokio = "0.1.6"
